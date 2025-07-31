@@ -57,25 +57,25 @@ export const Header = () => {
   };
 
   return (
-    <header className="border-b bg-card shadow-sm">
+    <header className="border-b bg-gradient-to-r from-header-blue to-primary shadow-lg">
       <div className="flex h-16 items-center justify-between px-6">
         <div className="flex items-center gap-3">
           <img src={dataCubeLogo} alt="Trino Console" className="h-10 w-10" />
           <div>
-            <h1 className="text-xl font-bold text-foreground">Trino Console</h1>
-            <p className="text-sm text-console-grey">Iceberg Lakehouse Management</p>
+            <h1 className="text-xl font-bold text-white">Trino Console</h1>
+            <p className="text-sm text-white/80">Iceberg Lakehouse Management</p>
           </div>
         </div>
         
         <div className="flex items-center gap-4">
-          <Badge variant="outline" className="bg-console-light-blue text-console-blue border-console-blue">
+          <Badge variant="outline" className="bg-white/20 text-white border-white/30 backdrop-blur-sm">
             Connected
           </Badge>
           
           {/* Admin Dropdown */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="sm" className="gap-2">
+              <Button variant="outline" size="sm" className="gap-2 bg-white/20 text-white border-white/30 hover:bg-white/30 backdrop-blur-sm">
                 <User className="h-4 w-4" />
                 Admin
               </Button>
@@ -112,7 +112,7 @@ export const Header = () => {
           {/* Settings Dialog */}
           <Dialog open={settingsOpen} onOpenChange={setSettingsOpen}>
             <DialogTrigger asChild>
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" className="bg-white/20 text-white border-white/30 hover:bg-white/30 backdrop-blur-sm">
                 <Settings className="h-4 w-4" />
               </Button>
             </DialogTrigger>

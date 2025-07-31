@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
+    --background: 0 0% 96%;
     --foreground: 210 24% 16%;
 
     --card: 0 0% 100%;
@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 210 24% 16%;
 
-    --primary: 210 100% 56%;
+    --primary: 213 94% 68%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96%;
@@ -26,29 +26,37 @@ All colors MUST be HSL.
     --muted: 210 40% 94%;
     --muted-foreground: 210 16% 46%;
 
-    --accent: 210 100% 95%;
-    --accent-foreground: 210 100% 26%;
+    --accent: 213 94% 68%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 210 20% 90%;
     --input: 210 20% 94%;
-    --ring: 210 100% 56%;
+    --ring: 213 94% 68%;
 
-    /* Custom Iceberg Console Colors */
-    --console-dark-blue: 210 100% 26%;
-    --console-blue: 210 100% 56%;
-    --console-light-blue: 210 100% 95%;
+    /* RefreshMate inspired colors */
+    --header-blue: 213 94% 68%;
+    --sidebar-dark: 210 50% 16%;
+    --sidebar-darker: 210 50% 12%;
+    --active-blue: 213 94% 68%;
+    --content-bg: 0 0% 96%;
+    
+    /* Custom Console Colors */
+    --console-dark-blue: 210 50% 16%;
+    --console-blue: 213 94% 68%;
+    --console-light-blue: 213 94% 95%;
     --console-grey: 210 16% 46%;
     --console-light-grey: 210 20% 90%;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(210 100% 56%), hsl(210 100% 26%));
+    --gradient-primary: linear-gradient(135deg, hsl(213 94% 68%), hsl(210 50% 16%));
+    --gradient-header: linear-gradient(135deg, hsl(213 94% 68%), hsl(213 94% 60%));
     --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 40% 98%));
     
     /* Shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(210 100% 56% / 0.2);
+    --shadow-elegant: 0 10px 30px -10px hsl(213 94% 68% / 0.2);
     --shadow-card: 0 4px 12px -2px hsl(210 20% 20% / 0.08);
     
     /* Animations */

@@ -57,6 +57,11 @@ export default {
 				'console-light-blue': 'hsl(var(--console-light-blue))',
 				'console-grey': 'hsl(var(--console-grey))',
 				'console-light-grey': 'hsl(var(--console-light-grey))',
+				'header-blue': 'hsl(var(--header-blue))',
+				'sidebar-dark': 'hsl(var(--sidebar-dark))',
+				'sidebar-darker': 'hsl(var(--sidebar-darker))',
+				'active-blue': 'hsl(var(--active-blue))',
+				'content-bg': 'hsl(var(--content-bg))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
