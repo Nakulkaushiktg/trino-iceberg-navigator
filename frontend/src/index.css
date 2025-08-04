@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 210 24% 16%;
 
-    --primary: 213 94% 68%;
+    --primary: 213 94% 50%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96%;
@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 210 40% 94%;
     --muted-foreground: 210 16% 46%;
 
-    --accent: 213 94% 68%;
+    --accent: 213 94% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -34,10 +34,10 @@ All colors MUST be HSL.
 
     --border: 210 20% 90%;
     --input: 210 20% 94%;
-    --ring: 213 94% 68%;
+    --ring: 213 94% 50%;
 
     /* RefreshMate inspired colors */
-    --header-blue: 213 94% 68%;
+    --header-blue: 213 94% 50%;
     --sidebar-dark: 210 50% 16%;
     --sidebar-darker: 210 50% 12%;
     --active-blue: 213 94% 68%;
