@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -40,6 +41,7 @@ import dataCubeLogo from "@/assets/data-cube-logo.png";
 import { useToast } from "@/hooks/use-toast";
 
 export const Header = () => {
+  const navigate = useNavigate();
   const { toast } = useToast();
 
   const handleLogout = () => {
@@ -56,11 +58,8 @@ export const Header = () => {
     });
   };
 
-  const handleMaintenanceAction = (action: string) => {
-    toast({
-      title: "Maintenance Action",
-      description: `${action} action initiated`,
-    });
+  const handleMaintenance = () => {
+    navigate("/maintenance");
   };
 
   return (
@@ -128,51 +127,16 @@ export const Header = () => {
             S3 Browser
           </Button>
 
-          {/* Maintenance Dropdown */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="sm" className="gap-2 bg-white/20 text-white border-white/30 hover:bg-white/30 backdrop-blur-sm">
-                <Wrench className="h-4 w-4" />
-                Maintenance
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-56 bg-card border border-console-light-grey">
-              <DropdownMenuLabel className="flex items-center gap-2">
-                <Wrench className="h-4 w-4" />
-                Maintenance Actions
-              </DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem 
-                className="gap-2 cursor-pointer hover:bg-console-light-blue"
-                onClick={() => handleMaintenanceAction("Expire Snapshot")}
-              >
-                <Clock className="h-4 w-4" />
-                Expire Snapshot
-              </DropdownMenuItem>
-              <DropdownMenuItem 
-                className="gap-2 cursor-pointer hover:bg-console-light-blue"
-                onClick={() => handleMaintenanceAction("Remove Orphans")}
-              >
-                <Trash2 className="h-4 w-4" />
-                Remove Orphans
-              </DropdownMenuItem>
-              <DropdownMenuItem 
-                className="gap-2 cursor-pointer hover:bg-console-light-blue"
-                onClick={() => handleMaintenanceAction("Optimize")}
-              >
-                <Zap className="h-4 w-4" />
-                Optimize
-              </DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem 
-                className="gap-2 cursor-pointer hover:bg-console-light-blue font-semibold"
-                onClick={() => handleMaintenanceAction("All Together")}
-              >
-                <List className="h-4 w-4" />
-                All Together
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          {/* Maintenance Button */}
+          <Button 
+            variant="outline" 
+            size="sm" 
+            className="gap-2 bg-white/20 text-white border-white/30 hover:bg-white/30 backdrop-blur-sm"
+            onClick={handleMaintenance}
+          >
+            <Wrench className="h-4 w-4" />
+            Maintenance
+          </Button>
         </div>
       </div>
     </header>
