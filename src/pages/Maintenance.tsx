@@ -14,7 +14,7 @@ import {
   ArrowLeft,
   Table
 } from "lucide-react";
-import { Header } from "@/components/Header";
+
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 
@@ -121,9 +121,7 @@ const Maintenance = () => {
   };
 
   return (
-    <div className="min-h-screen bg-content-bg">
-      <Header />
-      <main className="max-w-7xl mx-auto p-6">
+    <div className="p-6">
         <div className="mb-6">
           <Button 
             variant="outline" 
@@ -269,7 +267,6 @@ const Maintenance = () => {
             </div>
           </div>
         )}
-      </main>
     </div>
   );
 };
