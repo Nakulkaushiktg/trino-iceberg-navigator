@@ -5,8 +5,6 @@ import { CatalogList } from "@/components/CatalogList";
 import { TableList } from "@/components/TableList";
 import { TableDetails } from "@/components/TableDetails";
 import { SchemaList } from "@/components/SchemaList";
-import { AppSidebar } from "@/components/AppSidebar";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 
 type ViewType = "servers" | "catalogs" | "schemas" | "tables" | "table-details";
 
@@ -109,38 +107,13 @@ case "table-details":
     }
   };
 
-  const handleSidebarNavigation = (view: string) => {
-    setCurrentView(view as ViewType);
-    // Reset selections when navigating via sidebar
-    if (view === "servers") {
-      handleBackToServers();
-    } else if (view === "catalogs" && !selectedServer) {
-      setCurrentView("servers");
-    } else if (view === "schemas" && !selectedCatalog) {
-      setCurrentView("servers");
-    } else if (view === "tables" && !selectedSchema) {
-      setCurrentView("servers");
-    } else if (view === "table-details" && !selectedTable) {
-      setCurrentView("servers");
-    }
-  };
-
   return (
-    <SidebarProvider>
-      <div className="min-h-screen flex w-full bg-content-bg">
-        <AppSidebar 
-          currentView={currentView}
-          onNavigate={handleSidebarNavigation}
-        />
-        
-        <div className="flex-1 flex flex-col">
-          <Header />
-          <main className="flex-1 p-6 bg-content-bg">
-            {renderCurrentView()}
-          </main>
-        </div>
-      </div>
-    </SidebarProvider>
+    <div className="min-h-screen bg-content-bg">
+      <Header />
+      <main className="max-w-7xl mx-auto bg-content-bg">
+        {renderCurrentView()}
+      </main>
+    </div>
   );
 };
 export default Index;
