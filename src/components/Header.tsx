@@ -39,6 +39,7 @@ import {
 } from "lucide-react";
 import dataCubeLogo from "@/assets/data-cube-logo.png";
 import { useToast } from "@/hooks/use-toast";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 
 export const Header = () => {
   const navigate = useNavigate();
@@ -66,6 +67,7 @@ export const Header = () => {
     <header className="border-b bg-gradient-to-r from-header-blue to-primary shadow-lg">
       <div className="flex h-16 items-center justify-between px-6">
         <div className="flex items-center gap-3">
+          <SidebarTrigger className="text-white hover:bg-white/20 mr-2" />
           <img src="/public/favicon.ico" alt="Trino Console" className="h-10 w-10" />
 
           <div>
