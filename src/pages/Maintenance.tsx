@@ -17,6 +17,7 @@ import {
 
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
+import { AppSidebar } from "@/components/AppSidebar";
 
 type MaintenanceAction = "expire-snapshot" | "remove-orphans" | "optimize" | "all-together" | null;
 
@@ -121,16 +122,19 @@ const Maintenance = () => {
   };
 
   return (
-    <div className="p-6">
-        <div className="mb-6">
-          <Button 
-            variant="outline" 
-            onClick={goBack}
-            className="mb-4"
-          >
-            <ArrowLeft className="h-4 w-4 mr-2" />
-            {selectedAction ? "Back to Options" : "Back to Dashboard"}
-          </Button>
+    <div className="flex min-h-screen w-full">
+      <AppSidebar />
+      <div className="flex-1 ml-[280px] transition-all duration-300">
+        <div className="p-6">
+          <div className="mb-6">
+            <Button 
+              variant="outline" 
+              onClick={goBack}
+              className="mb-4"
+            >
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              {selectedAction ? "Back to Options" : "Back to Dashboard"}
+            </Button>
           
           <h1 className="text-3xl font-bold text-foreground mb-2">
             {selectedAction ? 
@@ -267,6 +271,8 @@ const Maintenance = () => {
             </div>
           </div>
         )}
+        </div>
+      </div>
     </div>
   );
 };
